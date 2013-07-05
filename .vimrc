@@ -1,5 +1,3 @@
-call pathogen#infect()
-
 set title
 set t_ts=]1;
 set t_fs=
