@@ -1,4 +1,4 @@
-"call pathogen#infect()
+call pathogen#infect()
 
 set title
 set t_ts=]1;
@@ -16,8 +16,23 @@ set history=1000
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
 
+
+set ignorecase
+set smartcase
+set gdefault
 set incsearch   "find the next match as we type the search
 set hlsearch    "hilight searches by default
+set showmatch
+
+nnoremap <leader><space> :noh<cr>
+nnoremap <tab> %
+vnoremap <tab> %
+
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+inoremap jj <ESC>
 
 set nowrap      "dont wrap lines
 set linebreak   "wrap lines at convenient points
@@ -88,6 +103,8 @@ filetype indent on
 "turn on syntax highlighting
 syntax on
 
+highlight StatusLine ctermfg=blue ctermbg=yellow
+
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
@@ -97,4 +114,7 @@ set t_Co=256
 
 "hide buffers when not displayed
 set hidden
+
+
+
 
